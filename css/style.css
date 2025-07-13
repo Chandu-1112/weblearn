@@ -1,0 +1,263 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: skyblue;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+}
+
+.navbar .left {
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+}
+
+.icon {
+  display: inline-block;
+  margin-left: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.icon img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+
+.why-web, .roadmap-section, .resources, .companies {
+  padding: 20px;
+  text-align: center;
+}
+
+.company-logos img {
+  width: 100px;
+  margin: 10px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.company-logos img:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  background: #eee;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 600px) {
+  .company-logos img {
+    width: 60px;
+  }
+
+  .icon img {
+    width: 24px;
+    height: 24px;
+  }
+}
+.slider {
+      width: 100;
+      height: 500px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .slides {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      height: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .why-web {
+padding: 40px 20px;
+background-color: #f9f9f9;
+text-align: center;
+}
+
+.why-web h2 {
+font-size: 2em;
+margin-bottom: 20px;
+color: #333;
+}
+
+.why-list {
+list-style-type: disc;
+text-align: left;
+max-width: 800px;
+margin: 0 auto;
+padding-left: 20px;
+color: #444;
+font-size: 1.1em;
+line-height: 1.6;
+}
+
+.roadmap-section {
+margin: 40px 0;
+text-align: center;
+}
+
+.view-roadmap-btn {
+background-color: #3498db;
+color: white;
+padding: 15px 30px;
+font-size: 1.2em;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+width: 90%;
+max-width: 400px;
+transition: background-color 0.3s ease;
+}
+
+.view-roadmap-btn:hover {
+background-color: #2980b9;
+}
+
+.video-thumb {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.video-thumb img {
+  width: 100%;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+.video-thumb .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: rgba(0, 0, 0, 0.2); /* subtle overlay */
+}
+
+.video-thumb .overlay img {
+  width: 60px;
+  height: 60px;
+}
+
+.video-thumb:hover img {
+  filter: blur(2px) brightness(0.7);
+}
+
+.video-thumb:hover .overlay {
+  opacity: 1;
+}
+
+/* Floating Notes Button */
+#floatingNotesBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+/* Notes Popup Box */
+#notesPopup {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+  overflow: hidden;
+  animation: slideIn 0.3s ease;
+}
+
+/* Notes Popup Header */
+.notes-header {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notes-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Textarea Styling */
+#notesInput {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  border: none;
+  resize: none;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+/* Save Button */
+#saveNotes {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0 0 12px 12px;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
